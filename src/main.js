@@ -145,7 +145,7 @@ if (cluster.isPrimary && args.m === 'CLUSTER') {
         logger.info('BASE DE DATOS CONECTADA');
         logger.info(`MODO ${args.m}`)
 
-        app.listen(args.p, (err) => {
+        app.listen(args.p || 8080, (err) => {
             if (err) return logger.error('error en listen server', err);
             logger.info(`Server running on port ${args.p}`);
         });
