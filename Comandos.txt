@@ -1,0 +1,4 @@
+pm2 start src/main.js --name="Server1" --watch -i max -- -p 8082 -m CLUSTER
+pm2 start src/main.js --name="Server2" --watch -- -p 8083 -m FORK
+pm2 start src/main.js --name="Server3" --watch -i max -- -p 8084 -m CLUSTER
+pm2 start src/main.js --name="Server4" --watch -- -p 8085 -m FORK
