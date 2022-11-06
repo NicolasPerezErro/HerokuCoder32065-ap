@@ -139,17 +139,17 @@ if (cluster.isPrimary && args.m === 'CLUSTER') {
 
     });
 
-    conectarDB(config.mongodb.cnxStr, err => {
+    //conectarDB(config.mongodb.cnxStr, err => {
 
-        if (err) return logger.error('error en conexión de base de datos', err);
-        logger.info('BASE DE DATOS CONECTADA');
-        logger.info(`MODO ${args.m}`)
+        //if (err) return logger.error('error en conexión de base de datos', err);
+        //logger.info('BASE DE DATOS CONECTADA');
+        //logger.info(`MODO ${args.m}`)
 
         app.listen(process.env.PORT || 8081, (err) => {
             if (err) return logger.error('error en listen server', err);
             logger.info(`Server running on port ${args.p}`);
         });
-    });
+    //});
 
 }
 
